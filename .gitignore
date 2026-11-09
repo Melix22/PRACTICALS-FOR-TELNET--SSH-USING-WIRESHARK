@@ -1,0 +1,19 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+
+# Sensitive/private materials
+.env
+*.key
+*.pem
+id_rsa*
+id_ed25519*
+
+# Raw packet captures are ignored by default to reduce accidental disclosure.
+# If your instructor explicitly requires them and it is safe to publish, remove
+# this rule intentionally and inspect the files before committing.
+*.pcap
+*.pcapng

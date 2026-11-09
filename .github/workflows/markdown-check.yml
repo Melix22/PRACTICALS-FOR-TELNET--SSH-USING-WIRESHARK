@@ -1,0 +1,21 @@
+name: Markdown checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Check Markdown files exist
+        run: |
+          test -f README.md
+          test -f docs/lab-workflow.md
+          test -f reports/findings.md
+          echo "Required Markdown files are present."
